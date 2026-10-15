@@ -9,6 +9,16 @@ pnpm install
 pnpm dev
 ```
 
+## 本地服务(mac)
+
+```bash
+./scripts/install_launchd_mac.sh   # 首次(或移动过项目目录后):安装 launchd 服务
+./scripts/start_mac.sh             # 启动并校验 http://127.0.0.1:5173/
+./scripts/stop_mac.sh              # 停止(加 --dry-run 只预览不动进程)
+```
+
+由 launchd 托管,脚本退出后服务继续运行;开机不会自动启动。日志在 /tmp/pinball-workshop-dev.log。
+
 ## 构建
 
 ```bash
